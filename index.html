@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Santiago Icasuriaga, desarrollador web fullstack en formación. Descubre mis proyectos, habilidades y cómo contactarme."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, desarrollador web, fullstack, Santiago Icasuriaga, proyectos, habilidades, contacto"
+    />
+    <meta name="author" content="Santiago Icasuriaga" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="src/output.css" rel="stylesheet" />
+    <title>Portfolio de Santiago Icasuriaga | Desarrollador Web</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      h1,
+      h2 {
+        font-family: var(--font-outfit), sans-serif;
+      }
+      p,
+      a,
+      .text-gray-300,
+      .text-gray-400,
+      .text-xs,
+      .text-sm,
+      .text-base {
+        font-family: var(--font-lexend), sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#23232a] text-white min-h-screen flex flex-col">
+    <header
+      class="w-full flex flex-col items-center pt-6 sm:pt-8"
+      role="banner"
+      x-data="{ open: false }"
+    >
+      <nav
+        class="w-full flex justify-center relative"
+        aria-label="Navegación principal"
+      >
+        <!-- Botón menú hamburguesa (solo mobile) -->
+        <button
+          @click="open = !open"
+          class="sm:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff] bg-[#23232a]"
+          aria-label="Abrir menú de navegación"
+          :aria-expanded="open"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- Menú de navegación -->
+        <ul
+          class="hidden sm:flex flex-wrap gap-2 sm:gap-4 bg-[#23232a] rounded-full px-3 py-2 sm:px-6 sm:py-2 shadow-lg"
+        >
+          <li>
+            <a
+              href="#sobre-mi"
+              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              aria-label="Sobre mí"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#proyectos"
+              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              aria-label="Proyectos"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#habilidades"
+              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              aria-label="Habilidades"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              aria-label="Contacto"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+        <!-- Menú móvil desplegable -->
+        <div
+          x-show="open"
+          @click.away="open = false"
+          x-transition
+          class="sm:hidden absolute top-12 left-4 right-4 bg-[#23232a] rounded-xl shadow-lg border border-[#353545] z-30"
+        >
+          <ul class="flex flex-col gap-2 py-4">
+            <li>
+              <a
+                @click="open = false"
+                href="#sobre-mi"
+                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                aria-label="Sobre mí"
+                >Sobre mí</a
+              >
+            </li>
+            <li>
+              <a
+                @click="open = false"
+                href="#proyectos"
+                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                aria-label="Proyectos"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a
+                @click="open = false"
+                href="#habilidades"
+                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                aria-label="Habilidades"
+                >Habilidades</a
+              >
+            </li>
+            <li>
+              <a
+                @click="open = false"
+                href="#contacto"
+                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                aria-label="Contacto"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CÍRCULOS DE FONDO -->
+    <div class="relative flex justify-center mt-6 sm:mt-8" aria-hidden="true">
+      <div class="absolute z-0 pointer-events-none select-none">
+        <div
+          class="w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] rounded-full bg-gradient-to-b from-[#23232a] via-[#2e2e38] to-[#3a3a47] opacity-60"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] rounded-full bg-[#23232a] opacity-80"
+        ></div>
+      </div>
+    </div>
+
+    <!-- ICONOS SOCIALES -->
+    <div class="relative flex justify-center mt-6 sm:mt-8 z-10">
+      <div
+        class="flex gap-4 sm:gap-6 bg-[#23232a] rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-[#353545]"
+        role="navigation"
+        aria-label="Redes sociales"
+      >
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-[#7b7bff] transition focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          aria-label="GitHub"
+        >
+          <svg
+            class="w-5 h-5 sm:w-6 sm:h-6"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-[#7b7bff] transition focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          aria-label="Twitter/X"
+        >
+          <svg
+            class="w-5 h-5 sm:w-6 sm:h-6"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-[#7b7bff] transition focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          aria-label="LinkedIn"
+        >
+          <svg
+            class="w-5 h-5 sm:w-6 sm:h-6"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+              clip-rule="evenodd"
+            />
+            <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <main
+      class="flex flex-col items-center justify-center flex-1 px-2 sm:px-4 mt-6 sm:mt-8 z-10"
+      id="sobre-mi"
+      role="main"
+    >
+      <section class="flex flex-col items-center">
+        <img
+          src="https://randomuser.me/api/portraits/men/32.jpg"
+          alt="Foto de Santiago Icasuriaga, desarrollador web"
+          class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-4 border-[#7b7bff] shadow-lg mb-2"
+          width="64"
+          height="64"
+          loading="lazy"
+        />
+        <div class="text-center">
+          <h1
+            class="font-semibold text-base sm:text-lg"
+            style="font-family: var(--font-outfit), sans-serif"
+          >
+            Santiago Icasuriaga
+          </h1>
+          <div class="text-xs sm:text-sm text-gray-400">
+            <a
+              href="mailto:icasuriagadeveloper@gmail.com"
+              class="hover:underline break-all"
+              style="font-family: var(--font-lexend), sans-serif"
+              >icasuriagadeveloper@gmail.com</a
+            >
+          </div>
+        </div>
+      </section>
+      <h2
+        class="text-xl sm:text-2xl md:text-3xl font-bold mt-4 sm:mt-6 text-center"
+        style="font-family: var(--font-outfit), sans-serif"
+      >
+        Bienvenido a mi
+        <span class="text-white">portfolio de desarrollo web</span>
+      </h2>
+      <p
+        class="mt-3 sm:mt-4 text-center text-gray-300 max-w-xs sm:max-w-xl text-sm sm:text-base"
+        style="font-family: var(--font-lexend), sans-serif"
+      >
+        Hola, soy Santiago Icasuriaga, un Desarrollador Web Fullstack en
+        formación. Creo landing pages e interfaces centradas en el usuario, con
+        un enfoque en la innovación y la funcionalidad.
+      </p>
+      <div
+        class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 w-full max-w-xs sm:max-w-none justify-center items-center"
+      >
+        <a
+          href="#proyectos"
+          class="w-full sm:w-auto bg-lime-400 hover:bg-lime-500 text-black font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-lime-400"
+          role="button"
+          style="font-family: var(--font-lexend), sans-serif"
+          >Ver proyectos</a
+        >
+        <a
+          href="#contacto"
+          class="w-full sm:w-auto bg-[#353545] hover:bg-[#44445a] text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          role="button"
+          style="font-family: var(--font-lexend), sans-serif"
+          >Contáctame</a
+        >
+      </div>
+    </main>
+
+    <footer
+      class="p-3 sm:p-4 bg-[#23232a] text-center text-xs sm:text-sm text-gray-500 mt-6 sm:mt-8"
+      id="contacto"
+      role="contentinfo"
+      style="font-family: var(--font-lexend), sans-serif"
+    >
+      &copy; 2025 Santiago Icasuriaga
+    </footer>
+  </body>
+</html>

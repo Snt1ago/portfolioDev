@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --font-lexend: "Lexend Deca", sans-serif;
+
+  /* neutro */
+  --color-blanco-50: #ffffff;
+  --color-blanco-100: #efefef;
+  --color-blanco-200: #dcdcdc;
+  --color-blanco-300: #bdbdbd;
+  --color-blanco-400: #989898;
+  --color-blanco-500: #7c7c7c;
+  --color-blanco-600: #656565;
+  --color-blanco-700: #525252;
+  --color-blanco-800: #464646;
+  --color-blanco-900: #3d3d3d;
+  --color-blanco-950: #292929;
+
+  /* azul */
+  --color-stratos-50: #e5f3ff;
+ --color-stratos-100: #d0e8ff;
+ --color-stratos-200: #aad4ff;
+ --color-stratos-300: #77b4ff;
+ --color-stratos-400: #4283ff;
+ --color-stratos-500: #1851ff;
+ --color-stratos-600: #0034ff;
+ --color-stratos-700: #0037ff;
+ --color-stratos-800: #0031e0;
+ --color-stratos-900: #0222ad;
+ --color-stratos-950: #010b40;
+
+/* verde */
+ --color-clover-50: #fbffe5;
+ --color-clover-100: #f3ffc8;
+ --color-clover-200: #e7ff97;
+ --color-clover-300: #d4fc5a;
+ --color-clover-400: #bdf229;
+ --color-clover-500: #9fd80a;
+ --color-clover-600: #7bad03;
+ --color-clover-700: #5c8308;
+ --color-clover-800: #4b670d;
+ --color-clover-900: #3e5710;
+ --color-clover-950: #2a4103;
+
+
+
+
+}
