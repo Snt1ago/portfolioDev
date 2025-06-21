@@ -220,11 +220,14 @@
     </div>
 
     <main
-      class="flex flex-col items-center justify-center flex-1 px-2 sm:px-4 mt-6 sm:mt-8 z-10"
+      class="flex flex-col items-center flex-1 px-2 sm:px-4 mt-6 sm:mt-8 z-10"
       role="main"
     >
       <!-- seccion Bienvenido -->
-      <section id="bienvenido/a">
+      <section
+        id="bienvenido/a"
+        class="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-3xl px-4 sm:px-6 py-6 bg-blanco-500 rounded-lg shadow-lg"
+      >
         <section class="text-center flex flex-col items-center">
           <img
             src="https://randomuser.me/api/portraits/men/32.jpg"
@@ -249,10 +252,10 @@
             >
           </div>
         </section>
-        <section>
+
+        <section class="flex items-center flex-col gap-2 sm:gap-4">
           <h2
-            class="text-xl sm:text-2xl md:text-4xl font-bold mt-4 sm:mt-6 text-center"
-            style="font-family: var(--font-outfit), sans-serif"
+            class="text-xl font-outfit sm:text-2xl md:text-4xl font-bold text-center"
           >
             Bienvenido a mi
             <span class="text-stratos-400">portfolio de desarrollo web</span>
@@ -265,24 +268,25 @@
             formación. Creo landing pages e interfaces centradas en el usuario,
             con un enfoque en la innovación y la funcionalidad.
           </p>
-          <div
-            class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 w-full max-w-xs sm:max-w-none justify-center items-center"
+        </section>
+
+        <section
+          class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 w-full max-w-xs sm:max-w-none justify-center items-center"
+        >
+          <a
+            href="#proyectos"
+            class="w-full sm:w-auto bg-clover-500 hover:bg-clover-600 text-black font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-lime-400"
+            role="button"
+            style="font-family: var(--font-lexend), sans-serif"
+            >Ver proyectos</a
           >
-            <a
-              href="#proyectos"
-              class="w-full sm:w-auto bg-clover-500 hover:bg-clover-600 text-black font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-lime-400"
-              role="button"
-              style="font-family: var(--font-lexend), sans-serif"
-              >Ver proyectos</a
-            >
-            <a
-              href="#contacto"
-              class="w-full sm:w-auto bg-tiburon-800 hover:bg-tiburon-700 text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-strtext-stratos-400"
-              role="button"
-              style="font-family: var(--font-lexend), sans-serif"
-              >Contáctame</a
-            >
-          </div>
+          <a
+            href="#contacto"
+            class="w-full sm:w-auto bg-tiburon-800 hover:bg-tiburon-700 text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-strtext-stratos-400"
+            role="button"
+            style="font-family: var(--font-lexend), sans-serif"
+            >Contáctame</a
+          >
         </section>
       </section>
       <!-- seccion Bienvenido -->
@@ -674,10 +678,22 @@
 
         <a
           href="#contacto"
-          class="w-full sm:w-auto font-lexend bg-tiburon-800 hover:bg-tiburon-700 text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-strtext-stratos-400"
+          class="flex justify-center gap-2 w-full sm:w-auto font-lexend bg-tiburon-800 hover:bg-tiburon-700 text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-strtext-stratos-400"
           role="button"
-          >Hablemos</a
-        >
+          >Hablemos
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
       </section>
       <!-- seccion comencemos -->
     </main>
