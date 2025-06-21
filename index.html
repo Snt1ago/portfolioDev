@@ -15,37 +15,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="src/output.css" rel="stylesheet" />
     <title>Portfolio de Santiago Icasuriaga | Desarrollador Web</title>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        overflow-x: hidden;
-      }
-      h1,
-      h2 {
-        font-family: var(--font-outfit), sans-serif;
-      }
-      p,
-      a,
-      .text-gray-300,
-      .text-gray-400,
-      .text-xs,
-      .text-sm,
-      .text-base {
-        font-family: var(--font-lexend), sans-serif;
-      }
-    </style>
   </head>
-  <body class="bg-[#23232a] text-white min-h-screen flex flex-col">
+  <body class="bg-tiburon-950 text-white min-h-screen flex flex-col">
     <header
       class="w-full flex flex-col items-center pt-6 sm:pt-8"
       role="banner"
-      x-data="{ open: false }"
     >
       <nav
         class="w-full flex justify-center relative"
@@ -54,7 +28,7 @@
         <!-- Botón menú hamburguesa (solo mobile) -->
         <button
           @click="open = !open"
-          class="sm:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff] bg-[#23232a]"
+          class="sm:hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400 bg-[#23232a]"
           aria-label="Abrir menú de navegación"
           :aria-expanded="open"
         >
@@ -75,20 +49,28 @@
         </button>
         <!-- Menú de navegación -->
         <ul
-          class="hidden sm:flex flex-wrap gap-2 sm:gap-4 bg-[#23232a] rounded-full px-3 py-2 sm:px-6 sm:py-2 shadow-lg"
+          class="hidden sm:flex flex-wrap gap-2 sm:gap-4 bg-blanco-800 rounded-full px-3 py-2 sm:px-6 sm:py-2 shadow-lg"
         >
           <li>
             <a
               href="#sobre-mi"
-              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              class="text-white font-medium hover:text-stratos-400 transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
               aria-label="Sobre mí"
               >Sobre mí</a
             >
           </li>
           <li>
             <a
+              href="#servicios"
+              class="text-white font-medium hover:text-stratos-400 transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
+              aria-label="Servicios"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
               href="#proyectos"
-              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              class="text-white font-medium hover:text-stratos-400 transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
               aria-label="Proyectos"
               >Proyectos</a
             >
@@ -96,7 +78,7 @@
           <li>
             <a
               href="#habilidades"
-              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              class="text-white font-medium hover:text-stratos-400 transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
               aria-label="Habilidades"
               >Habilidades</a
             >
@@ -104,7 +86,7 @@
           <li>
             <a
               href="#contacto"
-              class="text-white font-medium hover:text-[#7b7bff] transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+              class="text-white font-medium hover:text-stratos-400 transition px-3 py-1 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
               aria-label="Contacto"
               >Contacto</a
             >
@@ -122,7 +104,7 @@
               <a
                 @click="open = false"
                 href="#sobre-mi"
-                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
                 aria-label="Sobre mí"
                 >Sobre mí</a
               >
@@ -131,7 +113,7 @@
               <a
                 @click="open = false"
                 href="#proyectos"
-                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
                 aria-label="Proyectos"
                 >Proyectos</a
               >
@@ -140,7 +122,7 @@
               <a
                 @click="open = false"
                 href="#habilidades"
-                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
                 aria-label="Habilidades"
                 >Habilidades</a
               >
@@ -149,7 +131,7 @@
               <a
                 @click="open = false"
                 href="#contacto"
-                class="block text-white font-medium hover:text-[#7b7bff] transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
                 aria-label="Contacto"
                 >Contacto</a
               >
@@ -159,22 +141,10 @@
       </nav>
     </header>
 
-    <!-- CÍRCULOS DE FONDO -->
-    <div class="relative flex justify-center mt-6 sm:mt-8" aria-hidden="true">
-      <div class="absolute z-0 pointer-events-none select-none">
-        <div
-          class="w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] rounded-full bg-gradient-to-b from-[#23232a] via-[#2e2e38] to-[#3a3a47] opacity-60"
-        ></div>
-        <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] rounded-full bg-[#23232a] opacity-80"
-        ></div>
-      </div>
-    </div>
-
     <!-- ICONOS SOCIALES -->
     <div class="relative flex justify-center mt-6 sm:mt-8 z-10">
       <div
-        class="flex gap-4 sm:gap-6 bg-[#23232a] rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-[#353545]"
+        class="flex gap-4 sm:gap-6 bg-clover-900 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-clover-50 text-white"
         role="navigation"
         aria-label="Redes sociales"
       >
@@ -182,7 +152,7 @@
           href="https://github.com/"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-[#7b7bff] transition focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          class="hover:text-clover-500 transition focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
           aria-label="GitHub"
         >
           <svg
@@ -205,7 +175,7 @@
           href="https://x.com/"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-[#7b7bff] transition focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          class="hover:text-clover-500 transition focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
           aria-label="Twitter/X"
         >
           <svg
@@ -218,7 +188,7 @@
             viewBox="0 0 24 24"
           >
             <path
-              d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+              d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h4.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
             />
           </svg>
         </a>
@@ -226,7 +196,7 @@
           href="https://linkedin.com/"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-[#7b7bff] transition focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          class="hover:text-clover-500 transition focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
           aria-label="LinkedIn"
         >
           <svg
@@ -240,10 +210,10 @@
           >
             <path
               fill-rule="evenodd"
-              d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+              d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h4.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
               clip-rule="evenodd"
             />
-            <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+            <path d="M7.2 8.809H4V19.5h4.2V8.809Z" />
           </svg>
         </a>
       </div>
@@ -251,19 +221,19 @@
 
     <main
       class="flex flex-col items-center justify-center flex-1 px-2 sm:px-4 mt-6 sm:mt-8 z-10"
-      id="sobre-mi"
       role="main"
     >
-      <section class="flex flex-col items-center">
-        <img
-          src="https://randomuser.me/api/portraits/men/32.jpg"
-          alt="Foto de Santiago Icasuriaga, desarrollador web"
-          class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-4 border-[#7b7bff] shadow-lg mb-2"
-          width="64"
-          height="64"
-          loading="lazy"
-        />
-        <div class="text-center">
+      <!-- seccion Bienvenido -->
+      <section id="bienvenido/a">
+        <section class="text-center flex flex-col items-center">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Foto de Santiago Icasuriaga, desarrollador web"
+            class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-strtext-stratos-400 shadow-lg"
+            width="64"
+            height="64"
+            loading="lazy"
+          />
           <h1
             class="font-semibold text-base sm:text-lg"
             style="font-family: var(--font-outfit), sans-serif"
@@ -278,41 +248,403 @@
               >icasuriagadeveloper@gmail.com</a
             >
           </div>
-        </div>
+        </section>
+        <section>
+          <h2
+            class="text-xl sm:text-2xl md:text-4xl font-bold mt-4 sm:mt-6 text-center"
+            style="font-family: var(--font-outfit), sans-serif"
+          >
+            Bienvenido a mi
+            <span class="text-stratos-400">portfolio de desarrollo web</span>
+          </h2>
+          <p
+            class="mt-3 sm:mt-4 text-center text-gray-400 max-w-xs sm:max-w-xl text-sm sm:text-base"
+            style="font-family: var(--font-lexend), sans-serif"
+          >
+            Hola, soy Santiago Icasuriaga, un Desarrollador Web Fullstack en
+            formación. Creo landing pages e interfaces centradas en el usuario,
+            con un enfoque en la innovación y la funcionalidad.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 w-full max-w-xs sm:max-w-none justify-center items-center"
+          >
+            <a
+              href="#proyectos"
+              class="w-full sm:w-auto bg-clover-500 hover:bg-clover-600 text-black font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-lime-400"
+              role="button"
+              style="font-family: var(--font-lexend), sans-serif"
+              >Ver proyectos</a
+            >
+            <a
+              href="#contacto"
+              class="w-full sm:w-auto bg-tiburon-800 hover:bg-tiburon-700 text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-strtext-stratos-400"
+              role="button"
+              style="font-family: var(--font-lexend), sans-serif"
+              >Contáctame</a
+            >
+          </div>
+        </section>
       </section>
-      <h2
-        class="text-xl sm:text-2xl md:text-3xl font-bold mt-4 sm:mt-6 text-center"
-        style="font-family: var(--font-outfit), sans-serif"
+      <!-- seccion Bienvenido -->
+
+      <!-- seccion sobre mi -->
+      <section
+        class="gap-2 sm:gap-4 flex flex-col items-center mt-8 sm:mt-10 w-full max-w-3xl px-4 sm:px-6 py-6 bg-blanco-500 rounded-lg shadow-lg"
+        id="sobre-mi"
       >
-        Bienvenido a mi
-        <span class="text-white">portfolio de desarrollo web</span>
-      </h2>
-      <p
-        class="mt-3 sm:mt-4 text-center text-gray-300 max-w-xs sm:max-w-xl text-sm sm:text-base"
-        style="font-family: var(--font-lexend), sans-serif"
-      >
-        Hola, soy Santiago Icasuriaga, un Desarrollador Web Fullstack en
-        formación. Creo landing pages e interfaces centradas en el usuario, con
-        un enfoque en la innovación y la funcionalidad.
-      </p>
-      <div
-        class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 w-full max-w-xs sm:max-w-none justify-center items-center"
-      >
-        <a
-          href="#proyectos"
-          class="w-full sm:w-auto bg-lime-400 hover:bg-lime-500 text-black font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-lime-400"
-          role="button"
-          style="font-family: var(--font-lexend), sans-serif"
-          >Ver proyectos</a
+        <small
+          class="rounded-full font-lexend px-3 py-1 bg-tiburon-900 text-sm sm:text-base text-blanco-50"
         >
+          Conoceme
+        </small>
+
+        <section class="gap-2 sm:gap-4 flex flex-col items-center">
+          <h2
+            class="text-2xl font-outfit sm:text-3xl md:text-4xl font-bold text-center"
+          >
+            Conoce más sobre mi
+            <span class="text-stratos-400">trayectoria profesional</span>
+          </h2>
+          <p
+            class="text-center text-gray-400 max-w-xs sm:max-w-xl text-sm sm:text-base"
+            style="font-family: var(--font-lexend), sans-serif"
+          >
+            Hola, soy Santiago Icasuriaga, un Desarrollador Web Fullstack en
+            formación. Creo landing pages e interfaces centradas en el usuario,
+            con un enfoque en la innovación y la funcionalidad.
+          </p>
+        </section>
+
         <a
           href="#contacto"
-          class="w-full sm:w-auto bg-[#353545] hover:bg-[#44445a] text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-[#7b7bff]"
+          class="w-full sm:w-auto font-lexend bg-tiburon-800 hover:bg-tiburon-700 text-white font-semibold px-4 sm:px-6 py-2 rounded-full transition text-center focus:outline-none focus:ring-2 focus:ring-strtext-stratos-400"
           role="button"
-          style="font-family: var(--font-lexend), sans-serif"
-          >Contáctame</a
+          >Hablemos</a
         >
-      </div>
+      </section>
+      <!-- seccion sobre mi -->
+
+      <!-- seccion servicios -->
+      <section
+        id="servicios"
+        class="gap-2 sm:gap-4 flex flex-col items-center mt-8 sm:mt-10 w-full max-w-3xl px-4 sm:px-6 py-6 bg-blanco-500 rounded-lg shadow-lg"
+      >
+        <small
+          class="rounded-full font-lexend px-3 py-1 bg-tiburon-900 text-sm sm:text-base text-blanco-50"
+        >
+          Servicios
+        </small>
+
+        <section class="gap-2 sm:gap-4 flex flex-col items-center">
+          <h2
+            class="text-2xl font-outfit sm:text-3xl md:text-4xl font-bold text-center mt-4"
+          >
+            Servicios para <span class="text-stratos-400">Startups</span>
+          </h2>
+          <p
+            class="text-center text-gray-400 max-w-xs sm:max-w-xl text-sm sm:text-base mt-2"
+            style="font-family: var(--font-lexend), sans-serif"
+          >
+            Me especializo en el desarrollo de landing pages especificamente
+            diseñadas para startups en etapa inicial (MVP), optimizadas para
+            captar leads, validar ideas y escalar rápido.
+          </p>
+        </section>
+
+        <section class="flex flex-col gap-4 sm:gap-6 w-full max-w-3xl">
+          <h3
+            class="text-xl font-lexend sm:text-2xl md:text-3xl font-bold mt-4"
+          >
+            ¿Qué incluye?
+          </h3>
+          <ul class="grid place-items-center grid-cols-1 sm:grid-cols-2 gap-4">
+            <li
+              class="bg-tiburon-800 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  d="M12.378 1.602a.75.75 0 0 0-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03ZM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 0 0 .372-.648V7.93ZM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 0 0 .372.648l8.628 5.033Z"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Diseño personalizado
+              </h4>
+              <p class="text-gray-400 font-lexend">
+                Visualmente atractivo y alineado a tu marca.
+              </p>
+            </li>
+            <li
+              class="bg-tiburon-800 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M17.303 5.197A7.5 7.5 0 0 0 6.697 15.803a.75.75 0 0 1-1.061 1.061A9 9 0 1 1 21 10.5a.75.75 0 0 1-1.5 0c0-1.92-.732-3.839-2.197-5.303Zm-2.121 2.121a4.5 4.5 0 0 0-6.364 6.364.75.75 0 1 1-1.06 1.06A6 6 0 1 1 18 10.5a.75.75 0 0 1-1.5 0c0-1.153-.44-2.303-1.318-3.182Zm-3.634 1.314a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Enfoque estratégico
+              </h4>
+              <p class="text-gray-400 font-lexend">
+                Basado en objetivos, audiencia y conversión.
+              </p>
+            </li>
+            <li
+              class="bg-tiburon-800 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625ZM7.5 15a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7.5 15Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H8.25Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Copywriting persuasivo
+              </h4>
+              <p class="text-gray-400 font-lexend">
+                Texto claro que impulsa la acción.
+              </p>
+            </li>
+            <li
+              class="bg-tiburon-800 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Soporte & documentación
+              </h4>
+              <p class="text-gray-400 font-lexend">
+                Acompañamiento técnico post-lanzamiento.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <!-- seccion servicios -->
+
+      <!-- seccion beneficios -->
+      <section
+        id="servicios"
+        class="gap-4 sm:gap-6 flex flex-col items-center mt-8 sm:mt-10 w-full max-w-3xl px-4 sm:px-6 py-6 bg-blanco-500 rounded-lg shadow-lg"
+      >
+        <small
+          class="rounded-full font-lexend px-3 py-1 bg-tiburon-900 text-sm sm:text-base text-blanco-50"
+        >
+          Beneficios
+        </small>
+
+        <h2
+          class="text-2xl font-outfit sm:text-3xl md:text-4xl font-bold text-center mt-4"
+        >
+          ¿Por qué elegir mi <span class="text-stratos-400">servicio?</span>
+        </h2>
+
+        <section
+          class="flex items-center flex-col gap-4 sm:gap-6 w-full max-w-3xl"
+        >
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <h4 class="font-semibold font-lexend text-lg">
+                Diseños a medida (sin plantillas)
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-lexend font-semibold text-lg">
+                Seguridad con Cloudflare
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-lexend font-semibold text-lg">
+                Flexible a tus necesidades
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Dominio personalizado
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Soporte técnico continuo
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Alojamiento gratuito
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Optimización SEO incluida
+              </h4>
+            </li>
+            <li
+              class="bg-tiburon-800 flex gap-2 hover:bg-tiburon-700 text-white p-4 rounded-lg shadow transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-clover-500"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <h4 class="font-semibold font-lexend text-lg">
+                Optimización de archivos con PurgeCSS = mas velocidad
+              </h4>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <!-- seccion beneficios -->
     </main>
 
     <footer
