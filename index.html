@@ -15,11 +15,13 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="src/output.css" rel="stylesheet" />
     <title>Portfolio de Santiago Icasuriaga | Desarrollador Web</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="bg-tiburon-950 text-white min-h-screen flex flex-col">
     <header
       class="w-full flex flex-col items-center pt-6 sm:pt-8"
       role="banner"
+      x-data="{ open: false }"
     >
       <nav
         class="w-full flex justify-center relative"
@@ -104,7 +106,7 @@
               <a
                 @click="open = false"
                 href="#sobre-mi"
-                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
                 aria-label="Sobre mí"
                 >Sobre mí</a
               >
@@ -112,8 +114,17 @@
             <li>
               <a
                 @click="open = false"
+                href="#servicios"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
+                aria-label="Servicios"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                @click="open = false"
                 href="#proyectos"
-                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
                 aria-label="Proyectos"
                 >Proyectos</a
               >
@@ -122,7 +133,7 @@
               <a
                 @click="open = false"
                 href="#habilidades"
-                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
                 aria-label="Habilidades"
                 >Habilidades</a
               >
@@ -131,7 +142,7 @@
               <a
                 @click="open = false"
                 href="#contacto"
-                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-strattext-stratos-400"
+                class="block text-white font-medium hover:text-stratos-400 transition px-6 py-2 rounded focus:outline-none focus:ring-2 focus:ring-stratos-400"
                 aria-label="Contacto"
                 >Contacto</a
               >
@@ -619,7 +630,7 @@
                   d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
                   clip-rule="evenodd"
                 />
-            </svg>
+              </svg>
 
               <h4 class="font-semibold font-lexend text-lg">
                 Optimización SEO incluida
@@ -1058,6 +1069,7 @@
       <section
         id="contacto"
         class="gap-4 sm:gap-6 flex flex-col items-center mt-8 sm:mt-10 w-full max-w-3xl px-4 sm:px-6 py-6 bg-blanco-500 rounded-lg shadow-lg"
+
       >
         <small
           class="rounded-full font-lexend px-3 py-1 bg-tiburon-900 text-sm sm:text-base text-blanco-50"
